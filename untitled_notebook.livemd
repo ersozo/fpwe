@@ -1,0 +1,74 @@
+# Untitled notebook
+
+## Section
+
+```elixir
+list = [1, 2, 3]
+```
+
+```elixir
+case Enum.at(list, 2) do
+  1 -> "this won't print"
+  3 -> "3 is a match!"
+  _ -> "catch all" 
+end
+```
+
+```elixir
+defmodule Post do
+  defstruct(
+    id: nil,
+    title: "",
+    description: "",
+    author: ""
+  )
+end
+```
+
+```elixir
+post1 = %Post{id: 1, title: "Title No 1", author: "Julius Ceaser"}
+```
+
+```elixir
+case post1 do
+  %{author: "Ali"} -> "Got a post from Ali"
+  %{author: "Veli"} -> "Got a post from Veli"
+  _ -> "Got a post from #{post1.author}"
+end 
+```
+
+```elixir
+post1 = %{post1 | author: "Ali"}
+```
+
+```elixir
+case post1 do
+  %{author: "Ali"} -> "Got a post from Ali"
+  %{author: "Veli"} -> "Got a post from Veli"
+  _ -> "Got a post from #{post1.author}"
+end 
+```
+
+```elixir
+cond do
+  post1.author == "Ali" -> "Editing a post from Ali"
+  post1.author == "Veli" -> "Editing a post from Veli"
+  true -> "This is a catch all"  
+end
+```
+
+```elixir
+ cond do
+   hd(list) == 1 -> "Got a 1"
+   true -> "Head is #{hd(list)}"  
+ end
+```
+
+```elixir
+if true do
+  "This will work"
+else
+  "Else this will work"
+end
+
+```
