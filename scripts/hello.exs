@@ -119,3 +119,4 @@ Hello.world2("Ozgur")
 # in interactive shell i function (information) give explanation of data type
 # name = "ozgur"
 # i(name)
+# i name
