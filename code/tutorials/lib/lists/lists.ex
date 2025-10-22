@@ -36,4 +36,11 @@ defmodule Tutorials.Lists do
   def map(elements, func, acc \\ [])
   def map([], _, acc), do: reverse(acc)
   def map([h | t], func, acc), do: map(t, func, [func.(h) | acc])
+
+  # |> is the pipeline operator and it always passes the first argument to the function automatically.
+  # let's say we have an anonymous function:
+  # double = fn x -> x * 2 end
+  # we can write:
+  # [1, 2, 3, 4] |> Tutorials.Lists.map(double) |> Enum.reverse
+  # [8, 6, 4, 2]
 end
